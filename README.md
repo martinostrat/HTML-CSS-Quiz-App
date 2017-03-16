@@ -15,7 +15,7 @@ Submit your code to see the result of what you created and then wait for your te
 
 # Features
 
-App also has a content management system where you can add, edit or delete questions and coding challenges.<br/>
+App has a content management system where you can add, edit or delete questions and coding challenges.<br/>
 Submitted answer scores and code will also be viewable and gradable.
 
 # Behind the scenes

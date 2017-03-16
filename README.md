@@ -20,5 +20,5 @@ Submitted answer scores and code will also be viewable and gradable.
 
 # Behind the scenes
 
-Frontend of the project is created by HTML, CSS, JavaScript, jQuery and AJAX. <br/>
+Frontend of the project is created using HTML, CSS, JavaScript, jQuery and AJAX. <br/>
 Backend uses php and MySQL.

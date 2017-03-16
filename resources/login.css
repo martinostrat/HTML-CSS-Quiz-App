@@ -1,0 +1,108 @@
+/* ------------------ GENERAL ----------------+-- */
+
+body {
+  height: 100vh;
+  background:linear-gradient(135deg, #172a74, #21a9af);
+  background-color:#184e8e;
+  background-position: bottom;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.desc_wrap{
+  width: 75%;
+  margin: auto;
+}
+
+
+/* ------------------ LOGO ------------------ */
+
+.khk_logo {
+  height: 100px;
+}
+
+
+/* ------------------ INPUT ------------------ */
+
+.login_wrap {
+  display: flex;
+  width: 30%;
+  margin: auto;
+
+}
+
+.login_form {
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.input_button {
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* ------------------ TEXT ------------------ */
+
+.desc_text {
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.topScores, td {
+  border: 1px solid black;
+}
+
+.topScores th, .topScores td {
+  padding: 10px;
+}
+
+img {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+/* ------------------ QUESTIONS ------------------ */
+
+#question2, #question3, #question4, #question5 {
+  display: none;
+}
+
+.questions {
+  margin:auto;
+  text-align: center;
+  max-width: 80%;
+}
+
+
+/* TEST */
+.hide {
+  display: none;
+}
+
+
+/* Editor */
+
+#preview {
+  height: 50vh;
+  width: 100%;
+  display: none;
+  border: 1px solid black;
+}
+
+#subButton {
+  display: flex;
+  margin: 10px auto 10px;
+  padding: 10px 15px;
+}
+
+/* CodeMirror form */
+#codeForm {
+
+}
+
+#endButton {
+  display: none;
+}

@@ -1,0 +1,1 @@
+/pea.php http://m3.ikt.khk.ee/

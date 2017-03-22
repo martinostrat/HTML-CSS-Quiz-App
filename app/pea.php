@@ -25,15 +25,15 @@
             <form class="login_form" action="login.php" method="post">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input type="text" class="form-control" name="ees" placeholder="Eesnimi">
+                    <input type="text" class="form-control" name="ees" required placeholder="Eesnimi">
                 </div><br>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input type="text" class="form-control" name="pere" placeholder="Perenimi">
+                    <input type="text" class="form-control" name="pere" required placeholder="Perenimi">
                 </div><br>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-                    <input type="number" class="form-control" name="idnum" placeholder="Isikukood">
+                    <input type="number" class="form-control" name="idnum" required placeholder="Isikukood">
                 </div>
                 <input class="input_button btn btn-primary" type="submit" name="button" value="Alusta">
             </form>

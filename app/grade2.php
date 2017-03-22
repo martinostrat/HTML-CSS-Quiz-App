@@ -1,6 +1,6 @@
 <?php
 header('Location: ./praktiline.php');
-include '../resources/mysql.php';
+include 'mysql.php';
 include 'kys.php';
 /* User submitted answers */
 $answer1 = $_POST[1];
@@ -62,8 +62,8 @@ if ($answer10 == $oige10["vastus"]) { $totalCorrect++; }*/
 
 // Insert score to DB
 $userIsik = $_SESSION['currentUser'];
-$resultQuery = "insert into tulemused set Kasutaja_ID = (select id from kasutajad where id = '$userIsik'),
-Nimi = (select concat(kasutajad.eesnimi, ' ', kasutajad.perenimi) AS Nimi from kasutajad where id = '$userIsik'), Punkte_teooria = '$totalCorrect'";
+$resultQuery = "insert into tulemused set Kasutaja_ID = (select isikukood from kasutajad where isikukood = '$userIsik'),
+Nimi = (select concat(kasutajad.eesnimi, ' ', kasutajad.perenimi) AS Nimi from kasutajad where isikukood = '$userIsik'), Punkte_teooria = '$totalCorrect'";
 if ($link->query($resultQuery) === TRUE) {
 } else {
   echo $sql . $link->error;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Muuda küsimusi</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.1.0.js"></script>
+    <script src="../../resources/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="table-responsive">
+            <div id="live_data">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        function fetch_data() {
+            $.ajax({
+                url: "select.php",
+                method: "POST",
+                success: function(data) {
+                    $('#live_data').html(data);
+                }
+            });
+        }
+        fetch_data();
+
+        // ADD (POST)
+
+        $(document).on('click', '#btn_add', function() {
+            var kysimus = $('#kysimus').text();
+            var a = $('#A').text();
+            var b = $('#B').text();
+            var c = $('#C').text();
+            var vastus = $('#vastus').text();
+            $.ajax({
+                url: "insert.php",
+                method: "POST",
+                dataType: "text",
+                data: {
+                    kysimus: kysimus,
+                    A: a,
+                    B: b,
+                    C: c,
+                    vastus: vastus
+                },
+                success: function(data) {
+                    alert(data);
+                    fetch_data();
+                }
+            })
+        })
+
+
+        // DELETE
+
+        $(document).on('click', '.btn_delete', function() {
+            var tr = $(this).parents('tr');
+            var id = tr.data('id');
+            $.ajax({
+                url: "delete.php",
+                type: "DELETE",
+                dataType: "text",
+                data: {
+                    id: id
+                },
+                success: function(data) {
+                    alert(data);
+                    fetch_data();
+                }
+            })
+        })
+
+    });
+</script>
